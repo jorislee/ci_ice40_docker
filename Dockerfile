@@ -35,6 +35,9 @@ RUN apt-get update && apt-get install -y \
     gperf \
     gtkwave \
     make \
+    libhidapi-dev \
+    libusb-dev \
+    libusb-1.0 \
     && rm -rf /var/lib/apt/lists/* \
     # icestorm
     && git clone --recursive https://github.com/cliffordwolf/icestorm.git icestorm \
