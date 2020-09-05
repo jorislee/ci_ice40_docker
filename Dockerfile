@@ -46,7 +46,7 @@ RUN apt-get update && apt-get install -y \
     && git clone --recursive https://github.com/cseed/arachne-pnr.git arachne-pnr \
     && cd arachne-pnr && make clean && make -j$(nproc) && make install && cd - && rm -r arachne-pnr \
     # nextpnr
-    && git clone --recursive https://github.com/YosysHQ/nextpnr nextpnr \
+    && git clone --recursive https://github.com/YosysHQ/nextpnr.git nextpnr \
     && cd nextpnr && cmake -DARCH=ice40 -DBUILD_GUI=OFF -DCMAKE_INSTALL_PREFIX=/usr/local . \
     && make -j$(nproc) && make clean && make install && cd - && rm -r nextpnr \
     # yosys
