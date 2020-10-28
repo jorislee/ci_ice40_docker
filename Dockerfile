@@ -48,7 +48,7 @@ RUN apt-get update && apt-get install -y \
     # nextpnr
     && git clone --recursive https://github.com/YosysHQ/nextpnr.git nextpnr \
     && cd nextpnr && cmake -DARCH=ice40 -DBUILD_GUI=OFF -DCMAKE_INSTALL_PREFIX=/usr/local . \
-    && make -j$(nproc) && make clean && make install && cd - && rm -r nextpnr \
+    && make -j$(nproc) && make install && cd - && rm -r nextpnr \
     # yosys
     && git clone --recursive https://github.com/cliffordwolf/yosys.git yosys \
     && cd yosys && make clean && make yosys-abc \
